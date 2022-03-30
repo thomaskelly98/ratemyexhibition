@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "RME",
+  "name": "Rate My Exhibition",
   "icons": [
     {
       "src": "favicon.ico",
