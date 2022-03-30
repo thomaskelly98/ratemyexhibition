@@ -18,11 +18,15 @@ const App = () => {
     return (
         <div>
             <label className="label" htmlFor="notice">
-                Welcome to Rate My Exhibition
+                Welcome to <b>Rate My Exhibition</b>!
             </label>
             <p></p>
             <a className="link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                Follow this link for more great content
+                Be sure to check out our Instagram page for more great content
+            </a>
+            <p></p>
+            <a className="link" href="https://www.youtube.com/watch?v=lq_sRC7g9VE">
+                Like what we do and want to support our work? Send us a donation
             </a>
         </div>
     )
