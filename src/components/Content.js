@@ -1,29 +1,29 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Collapse } from "@material-ui/core";
-import ImageCard from "./ImageCard";
-import cards from "../static/cards";
-import useWindowPosition from "../hook/useWindowPosition";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Collapse } from '@material-ui/core';
+import ImageCard from './ImageCard';
+import cards from '../static/cards';
+import useWindowPosition from '../hook/useWindowPosition';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
     },
   },
   grid: {
-    justifyContent: "center",
+    justifyContent: 'center',
   },
 }));
 
 export default function Content() {
   const classes = useStyles();
-  const checked = useWindowPosition("header");
+  const checked = useWindowPosition('header');
   return (
     <div className={classes.root} id="content">
       <Collapse in={checked} {...(checked ? { timeout: 1500 } : {})}>

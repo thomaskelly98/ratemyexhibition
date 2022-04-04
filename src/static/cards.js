@@ -1,21 +1,21 @@
 const cards = [
   {
-    title: "Instagram",
+    title: 'Instagram',
     description:
-      "Be sure to check out our Instagram page for lots more great content!",
+      'Be sure to check out our Instagram page for lots more great content!',
     imageUrl: `${process.env.PUBLIC_URL}/assets/instagram.jpg`,
-    direction: "left",
+    direction: 'left',
     timeout: 1500,
-    link: "https://www.instagram.com/ratemyexhibition/",
+    link: 'https://www.instagram.com/ratemyexhibition/',
   },
   {
-    title: "Donate",
+    title: 'Donate',
     description:
-      "If you like what we do and would like to support our work, donations are welcomed on our Patreon.",
+      'If you like what we do and would like to support our work, donations are welcomed on our Patreon.',
     imageUrl: `${process.env.PUBLIC_URL}/assets/donate.jpg`,
-    direction: "right",
+    direction: 'right',
     timeout: 1500,
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   },
 ];
 

@@ -1,28 +1,28 @@
 /* eslint-disable react/prop-types */
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { CardActionArea } from "@material-ui/core";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import { CardActionArea } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: "100vw",
-    margin: "20px",
+    maxWidth: '100vw',
+    margin: '20px',
   },
   media: {
-    height: "30vh",
+    height: '30vh',
   },
   title: {
-    fontFamily: "Roboto",
-    fontWeight: "bold",
-    color: "text.primary",
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
+    color: 'text.primary',
   },
   description: {
-    fontFamily: "Roboto",
-    color: "text.secondary",
+    fontFamily: 'Roboto',
+    color: 'text.secondary',
   },
 }));
 
