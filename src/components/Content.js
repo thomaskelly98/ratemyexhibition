@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Collapse } from "@material-ui/core";
 import ImageCard from "./ImageCard";
 import cards from "../static/cards";
-import { Grid } from "@material-ui/core";
 import useWindowPosition from "../hook/useWindowPosition";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,8 +26,10 @@ export default function Content() {
   const checked = useWindowPosition("header");
   return (
     <div className={classes.root} id="content">
-      <ImageCard cardInfo={cards[0]} checked={checked} />
-      <ImageCard cardInfo={cards[1]} checked={checked} />
+      <Collapse in={checked} {...(checked ? { timeout: 1500 } : {})}>
+        <ImageCard cardInfo={cards[0]} checked={checked} />
+        <ImageCard cardInfo={cards[1]} checked={checked} />
+      </Collapse>
     </div>
   );
 }

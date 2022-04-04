@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {
-  makeStyles,
-  createTheme,
-  responsiveFontSizes,
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Avatar,
   Collapse,
-  Icon,
   IconButton,
-  ThemeProvider,
   Toolbar,
 } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Typography from "@mui/material/Typography";
 import { Link as Scroll } from "react-scroll";
-import { Image } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,9 +94,10 @@ export default function Header() {
         <Toolbar className={classes.appbarWrapper}>
           <Avatar alt="R" src={logoUrl} className={classes.logo} />
           <h1 className={classes.appbarTitle}>
-            RateMy<span className={classes.headingColor}>Exhibition</span>
+            RateMy
+            <span className={classes.headingColor}>Exhibition</span>
           </h1>
-          <Scroll to="content" smooth={true}>
+          <Scroll to="content" smooth>
             <IconButton>
               <SortIcon className={classes.sortIcon} />
             </IconButton>
@@ -114,15 +107,18 @@ export default function Header() {
 
       <Collapse
         in={checked}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...(checked ? { timeout: 1000 } : {})}
         collapsedHeight={50}
       >
         <div className={classes.container}>
           <h1 className={classes.title}>
-            Welcome to <br /> RateMy
+            Welcome to
+            <br />
+            RateMy
             <span className={classes.titleColor}>Exhibition</span>
           </h1>
-          <Scroll to="content" smooth={true}>
+          <Scroll to="content" smooth>
             <IconButton>
               <ExpandMoreIcon className={classes.seeMore} />
             </IconButton>

@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { CardActionArea, Collapse } from "@material-ui/core";
+import { CardActionArea } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: "100vw",
     margin: "20px",
@@ -25,38 +26,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImageCard({ cardInfo, checked }) {
+export default function ImageCard({ cardInfo }) {
   const classes = useStyles();
 
   return (
-    <Collapse in={checked} {...(checked ? { timeout: cardInfo.timeout } : {})}>
-      <Card className={classes.root}>
-        <CardActionArea href={cardInfo.link}>
-          <CardMedia
-            className={classes.media}
-            component="img"
-            image={cardInfo.imageUrl}
-            alt="abstract image"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              className={classes.title}
-            >
-              {cardInfo.title}
-            </Typography>
-            <Typography
-              variant="body2"
-              component="p"
-              className={classes.description}
-            >
-              {cardInfo.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </Collapse>
+    <Card className={classes.root}>
+      <CardActionArea href={cardInfo.link}>
+        <CardMedia
+          className={classes.media}
+          component="img"
+          image={cardInfo.imageUrl}
+          alt="abstract image"
+        />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            className={classes.title}
+          >
+            {cardInfo.title}
+          </Typography>
+          <Typography
+            variant="body2"
+            component="p"
+            className={classes.description}
+          >
+            {cardInfo.description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
