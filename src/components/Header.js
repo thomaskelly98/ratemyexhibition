@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   appbarWrapper: {
     width: "80%",
     margin: "0 auto",
+    [theme.breakpoints.down("md")]: {
+      width: "95%"
+    }
   },
   appbarTitle: {
     flexGrow: "1",
