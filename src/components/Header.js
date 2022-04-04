@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Collapse, IconButton, Toolbar } from "@material-ui/core";
+import {
+  makeStyles,
+  createTheme,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
+import {
+  AppBar,
+  Collapse,
+  IconButton,
+  ThemeProvider,
+  Toolbar,
+} from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Typography from "@mui/material/Typography";
+import { Link as Scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,10 +34,17 @@ const useStyles = makeStyles((theme) => ({
   },
   appbarTitle: {
     flexGrow: "1",
+    fontSize: "2.3rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.5rem",
+    },
   },
-  icon: {
+  sortIcon: {
     color: "#fff",
-    fontSize: "2rem",
+    fontSize: "3rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2rem",
+    },
   },
   headingColor: {
     color: "#ffca4d",
@@ -33,35 +52,47 @@ const useStyles = makeStyles((theme) => ({
   titleColor: {
     color: "#fe1959",
   },
+  textColor: {
+    color: "#fff",
+  },
   container: {
     textAlign: "center",
   },
   title: {
     color: "#fff",
     fontSize: "3.5rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2.5rem",
+    },
   },
   seeMore: {
     color: "#fff",
     fontSize: "4rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "3rem",
+    },
   },
 }));
 
 export default function Header() {
   const classes = useStyles();
   const [checked, setChecked] = useState(false);
+
   useEffect(() => {
     setChecked(true);
   }, []);
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>
             RateMy<span className={classes.headingColor}>Exhibition</span>
           </h1>
-          <IconButton>
-            <SortIcon className={classes.icon} />
-          </IconButton>
+          <Scroll to="content" smooth={true}>
+            <IconButton>
+              <SortIcon className={classes.sortIcon} />
+            </IconButton>
+          </Scroll>
         </Toolbar>
       </AppBar>
 
@@ -75,9 +106,11 @@ export default function Header() {
             Welcome to <br /> RateMy
             <span className={classes.titleColor}>Exhibition</span>
           </h1>
-          <IconButton>
-            <ExpandMoreIcon className={classes.seeMore} />
-          </IconButton>
+          <Scroll to="content" smooth={true}>
+            <IconButton>
+              <ExpandMoreIcon className={classes.seeMore} />
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>

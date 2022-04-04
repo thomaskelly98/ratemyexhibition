@@ -4,15 +4,15 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { CardActionArea } from "@material-ui/core";
+import { CardActionArea, Collapse } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 640,
+    maxWidth: "100vw",
     margin: "20px",
   },
   media: {
-    height: 540,
+    height: "30vh",
   },
   title: {
     fontFamily: "Roboto",
@@ -25,10 +25,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImageCard({ cardInfo }) {
+export default function ImageCard({ cardInfo, checked }) {
   const classes = useStyles();
 
   return (
+    // <Collapse in={checked} {...(checked ? { timeout: cardInfo.timeout } : {})}>
     <Card className={classes.root}>
       <CardActionArea href={cardInfo.link}>
         <CardMedia
@@ -56,5 +57,6 @@ export default function ImageCard({ cardInfo }) {
         </CardContent>
       </CardActionArea>
     </Card>
+    // </Collapse>
   );
 }
