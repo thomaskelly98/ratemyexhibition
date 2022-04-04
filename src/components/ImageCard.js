@@ -29,34 +29,34 @@ export default function ImageCard({ cardInfo, checked }) {
   const classes = useStyles();
 
   return (
-    // <Collapse in={checked} {...(checked ? { timeout: cardInfo.timeout } : {})}>
-    <Card className={classes.root}>
-      <CardActionArea href={cardInfo.link}>
-        <CardMedia
-          className={classes.media}
-          component="img"
-          image={cardInfo.imageUrl}
-          alt="abstract image"
-        />
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            className={classes.title}
-          >
-            {cardInfo.title}
-          </Typography>
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.description}
-          >
-            {cardInfo.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    // </Collapse>
+    <Collapse in={checked} {...(checked ? { timeout: cardInfo.timeout } : {})}>
+      <Card className={classes.root}>
+        <CardActionArea href={cardInfo.link}>
+          <CardMedia
+            className={classes.media}
+            component="img"
+            image={cardInfo.imageUrl}
+            alt="abstract image"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              className={classes.title}
+            >
+              {cardInfo.title}
+            </Typography>
+            <Typography
+              variant="body2"
+              component="p"
+              className={classes.description}
+            >
+              {cardInfo.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Collapse>
   );
 }

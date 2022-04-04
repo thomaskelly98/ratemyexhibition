@@ -6,7 +6,9 @@ import {
 } from "@material-ui/core/styles";
 import {
   AppBar,
+  Avatar,
   Collapse,
+  Icon,
   IconButton,
   ThemeProvider,
   Toolbar,
@@ -15,6 +17,7 @@ import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Typography from "@mui/material/Typography";
 import { Link as Scroll } from "react-scroll";
+import { Image } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     margin: "0 auto",
     [theme.breakpoints.down("md")]: {
-      width: "95%"
-    }
+      width: "100%",
+    },
   },
   appbarTitle: {
     flexGrow: "1",
@@ -75,11 +78,20 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "3rem",
     },
   },
+  logo: {
+    width: "5rem",
+    height: "5rem",
+    [theme.breakpoints.down("md")]: {
+      width: "3rem",
+      height: "3rem",
+    },
+  },
 }));
 
 export default function Header() {
   const classes = useStyles();
   const [checked, setChecked] = useState(false);
+  const logoUrl = "assets/logo240.png";
 
   useEffect(() => {
     setChecked(true);
@@ -88,6 +100,7 @@ export default function Header() {
     <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appbarWrapper}>
+          <Avatar alt="R" src={logoUrl} className={classes.logo} />
           <h1 className={classes.appbarTitle}>
             RateMy<span className={classes.headingColor}>Exhibition</span>
           </h1>
