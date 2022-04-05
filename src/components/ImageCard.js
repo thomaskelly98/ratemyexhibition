@@ -7,13 +7,16 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { CardActionArea } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '100vw',
     margin: '20px',
   },
   media: {
     height: '30vh',
+    [theme.breakpoints.down('md')]: {
+      height: '20vh',
+    },
   },
   title: {
     fontFamily: 'Roboto',
