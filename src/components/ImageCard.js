@@ -10,12 +10,12 @@ import { CardActionArea } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '100vw',
-    margin: '20px',
+    height: '100%',
   },
   media: {
-    height: '30vh',
+    height: '25vh',
     [theme.breakpoints.down('md')]: {
-      height: '20vh',
+      height: '10vh',
     },
   },
   title: {
@@ -33,8 +33,8 @@ export default function ImageCard({ cardInfo }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea href={cardInfo.link}>
+    <CardActionArea href={cardInfo.link} className={classes.root}>
+      <Card className={classes.root}>
         <CardMedia
           className={classes.media}
           component="img"
@@ -58,7 +58,7 @@ export default function ImageCard({ cardInfo }) {
             {cardInfo.description}
           </Typography>
         </CardContent>
-      </CardActionArea>
-    </Card>
+      </Card>
+    </CardActionArea>
   );
 }
