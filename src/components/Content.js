@@ -12,18 +12,16 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    margin: '0 auto',
+    width: '80%',
     [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
+      width: '90%',
     },
   },
   grid: {
-    minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
+    // todo: add margin to bottom of screen.
+    // perhaps contain the grid using percentage
+    height: '80%',
   },
 }));
 
@@ -33,13 +31,19 @@ export default function Content() {
   return (
     <div className={classes.root} id="content">
       <Collapse in={checked} {...(checked ? { timeout: 1500 } : {})}>
-        <Grid
-          container
-          className={classes.grid}
-          style={{ textAlign: 'center' }}
-        >
-          <ImageCard cardInfo={cards[0]} checked={checked} />
-          <ImageCard cardInfo={cards[1]} checked={checked} />
+        <Grid container spacing={2} sx={{ m: '2rem' }}>
+          <Grid item xs={12} s={12} md={12} lg={8} xl={8}>
+            <ImageCard cardInfo={cards[0]} checked={checked} />
+          </Grid>
+          <Grid item xs={12} s={12} md={12} lg={4} xl={4}>
+            <ImageCard cardInfo={cards[1]} checked={checked} />
+          </Grid>
+          <Grid item xs={12} s={12} md={12} lg={4} xl={4}>
+            <ImageCard cardInfo={cards[2]} checked={checked} />
+          </Grid>
+          <Grid item xs={12} s={12} md={12} lg={8} xl={8}>
+            <ImageCard cardInfo={cards[3]} checked={checked} />
+          </Grid>
         </Grid>
       </Collapse>
     </div>

@@ -4,8 +4,6 @@ const cards = [
     description:
       'Be sure to check out our Instagram page for lots more great content!',
     imageUrl: `${process.env.PUBLIC_URL}/assets/instagram.jpg`,
-    direction: 'left',
-    timeout: 1500,
     link: 'https://www.instagram.com/ratemyexhibition/',
   },
   {
@@ -13,9 +11,20 @@ const cards = [
     description:
       'If you like what we do and would like to support our work, donations are welcomed on our Patreon.',
     imageUrl: `${process.env.PUBLIC_URL}/assets/donate.jpg`,
-    direction: 'right',
-    timeout: 1500,
     link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  },
+  {
+    title: 'A third thingy',
+    description: "If you like the other links you're gonna love this one.",
+    imageUrl: `${process.env.PUBLIC_URL}/assets/img3.jpg`,
+    link: 'https://www.youtube.com/watch?v=C0uqy1LHDE8&list=LL&index=6',
+  },
+  {
+    title: 'Contact Us',
+    description:
+      'Feel free to contact us if you have any queries or advice. We love to get feedback from our fans!',
+    imageUrl: `${process.env.PUBLIC_URL}/assets/img4.jpg`,
+    link: 'https://www.youtube.com/watch?v=lq_sRC7g9VE',
   },
 ];
 
