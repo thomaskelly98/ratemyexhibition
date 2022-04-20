@@ -7,7 +7,7 @@ import {
   IconButton,
   Toolbar,
 } from '@material-ui/core';
-import SortIcon from '@material-ui/icons/Sort';
+import MenuIcon from '@material-ui/icons/Menu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
 
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '1.5rem',
     },
   },
-  sortIcon: {
+  menuIcon: {
     color: '#fff',
     fontSize: '3rem',
     [theme.breakpoints.down('md')]: {
@@ -99,7 +99,7 @@ export default function Header() {
           </h1>
           <Scroll to="content" smooth>
             <IconButton>
-              <SortIcon className={classes.sortIcon} />
+              <MenuIcon className={classes.menuIcon} />
             </IconButton>
           </Scroll>
         </Toolbar>

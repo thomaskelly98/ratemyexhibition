@@ -14,8 +14,9 @@ const cards = [
     link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   },
   {
-    title: 'A third thingy',
-    description: "If you like the other links you're gonna love this one.",
+    title: 'Youtube',
+    description:
+      'Check out our Youtube channel for all of our longer form video content.',
     imageUrl: `${process.env.PUBLIC_URL}/assets/img3.jpg`,
     link: 'https://www.youtube.com/watch?v=C0uqy1LHDE8&list=LL&index=6',
   },
@@ -24,7 +25,7 @@ const cards = [
     description:
       'Feel free to contact us if you have any queries or advice. We love to get feedback from our fans!',
     imageUrl: `${process.env.PUBLIC_URL}/assets/img4.jpg`,
-    link: 'https://www.youtube.com/watch?v=lq_sRC7g9VE',
+    link: 'mailto:ratemyexhibition@gmail.com?subject=General Queries',
   },
 ];
 
