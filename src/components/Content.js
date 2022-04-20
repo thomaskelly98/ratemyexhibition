@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Collapse, Grid } from '@material-ui/core';
 import ImageCard from './ImageCard';
@@ -30,7 +30,11 @@ export default function Content() {
   const checked = useWindowPosition('header');
   return (
     <div className={classes.root} id="content">
-      <Collapse in={checked} {...(checked ? { timeout: 1500 } : {})}>
+      <Collapse
+        className={classes.root}
+        in={checked}
+        {...(checked ? { timeout: 1500 } : {})}
+      >
         <Grid container spacing={2} sx={{ m: '2rem' }}>
           <Grid item xs={12} s={12} md={12} lg={8} xl={8}>
             <ImageCard cardInfo={cards[0]} checked={checked} />
