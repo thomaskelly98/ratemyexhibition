@@ -9,9 +9,9 @@ const cards = [
   {
     title: 'Donate',
     description:
-      'Our goal is to help support the local Art community. If you would like to donate to Young at Art, a local non-profit, click here.',
+      'Our goal is to help support the local Art community. In future, this portal will allow for donations to local non-profits.',
     imageUrl: `${process.env.PUBLIC_URL}/assets/donate.jpg`,
-    link: 'https://youngatart.ticketsolve.com/donations?_ga=2.255884940.627427586.1651311831-414148404.1651311831',
+    link: 'https://crescentarts.org/about/the-crescent/the-hub',
   },
   {
     title: 'Contact Us',
