@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 auto',
-    width: '80%',
+    width: '85%',
     [theme.breakpoints.down('md')]: {
       width: '90%',
     },
@@ -36,7 +36,7 @@ export default function Content() {
         {...(checked ? { timeout: 1500 } : {})}
       >
         <Grid container spacing={2} sx={{ m: '2rem' }}>
-          <Grid item xs={12} s={12} md={12} lg={8} xl={8}>
+          <Grid item xs={12} s={12} md={12} lg={4} xl={4}>
             <ImageCard cardInfo={cards[0]} checked={checked} />
           </Grid>
           <Grid item xs={12} s={12} md={12} lg={4} xl={4}>
@@ -44,9 +44,6 @@ export default function Content() {
           </Grid>
           <Grid item xs={12} s={12} md={12} lg={4} xl={4}>
             <ImageCard cardInfo={cards[2]} checked={checked} />
-          </Grid>
-          <Grid item xs={12} s={12} md={12} lg={8} xl={8}>
-            <ImageCard cardInfo={cards[3]} checked={checked} />
           </Grid>
         </Grid>
       </Collapse>

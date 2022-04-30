@@ -45,10 +45,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headingColor: {
-    color: '#ffca4d',
+    color: '#fe1959',
   },
   titleColor: {
-    color: '#fe1959',
+    color: '#ffca4d',
   },
   textColor: {
     color: '#fff',

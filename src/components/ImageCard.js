@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   media: {
-    height: '25vh',
+    height: '40vh',
     [theme.breakpoints.down('md')]: {
       height: '10vh',
     },
